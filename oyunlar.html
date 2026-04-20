@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Taekwondo Oyunları</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
+/* HEADER */
+header {
+  background: #ff3c00;
+  padding: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* ANA SAYFA */
+#menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #222;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: #333;
+}
+
+/* OYUN EKRANI */
+#gameScreen {
+  display: none;
+  padding: 20px;
+}
+
+#player {
+  font-size: 80px;
+  margin-top: 40px;
+}
+
+button {
+  padding: 15px 25px;
+  font-size: 18px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.backBtn {
+  background: red;
+  color: white;
+}
+
+.actionBtn {
+  background: limegreen;
+  color: white;
+}
+</style>
+
+</head>
+<body>
+
+<header>🥋 Taekwondo Oyunları</header>
+
+<!-- ANA MENÜ -->
+<div id="menu">
+
+  <div class="card" onclick="startGame('Kick Master')">
+    <h3>Kick Master</h3>
+  </div>
+
+  <div class="card" onclick="startGame('Dojo Fighter')">
+    <h3>Dojo Fighter</h3>
+  </div>
+
+  <div class="card" onclick="startGame('Taekwondo Challenge')">
+    <h3>Taekwondo Challenge</h3>
+  </div>
+
+</div>
+
+<!-- OYUN EKRANI -->
+<div id="gameScreen">
+  <h1 id="gameTitle"></h1>
+
+  <div id="player">🧍</div>
+
+  <button class="actionBtn" onclick="kick()">Tekme At</button>
+  <button class="backBtn" onclick="goBack()">Geri</button>
+</div>
+
+<script>
+function startGame(name) {
+  document.getElementById("menu").style.display = "none";
+  document.getElementById("gameScreen").style.display = "block";
+  document.getElementById("gameTitle").innerText = name;
+}
+
+function goBack() {
+  document.getElementById("menu").style.display = "grid";
+  document.getElementById("gameScreen").style.display = "none";
+}
+
+function kick() {
+  const player = document.getElementById("player");
+  player.innerHTML = "🦵";
+
+  setTimeout(() => {
+    player.innerHTML = "🧍";
+  }, 300);
+}
+</script>
+
+</body>
+</html>

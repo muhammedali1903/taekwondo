@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammed Ali Kepçeli</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* HEADER */
+header {
+    background: #ff3c00;
+    padding: 15px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: limegreen;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+/* PROJELER */
+.cards {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cards a {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    flex: 1;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.cards a:hover {
+    background: #333;
+    transform: scale(1.05);
+}
+
+/* VIDEO */
+iframe {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    margin-top: 30px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <div class="container nav">
+        <h3>Muhammed Ali</h3>
+        <nav>
+            <a href="#anasayfa">Anasayfa</a> 
+            <a href="oyunlar.html">Oyunlar</a>
+            <a href="teakwando.html">Taekwondo</a>
+            <a href="iletisim.html">İletişim</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero container" id="anasayfa">
+    <img src="https://cms-image-contents.s3-us-west-1.amazonaws.com/2023/women-wearing-doboks-training-leg-kicks-together-1702637569-r.jpg">
+    <h2>Merhaba 🖐</h2>
+    <p>Ben web geliştirme öğreniyorum ve projeler geliştiriyorum</p>
+    <a href="#" class="btn">Projelerim</a>
+</section>
+
+<!-- PROJELER -->
+<section id="projeler" class="container"> 
+    <h2>Projelerim</h2>
+    <div class="cards">
+        <a href="#">Web Sitesi</a>
+        <a href="#">Python ile Taekwondo</a>
+        <a href="#">Mobil Uygulama</a>
+    </div>
+</section>
+
+<!-- VIDEO -->
+<section class="container">
+    <h2>Video</h2>
+    <iframe src="https://www.youtube.com/embed/cz7cctS3eHQ" allowfullscreen></iframe>
+</section>
+
+<!-- İLETİŞİM -->
+<section id="iletisim" class="container">
+    <h3>İletişim</h3>
+    <p>Muhammedalikepceli@gmail.com</p>
+</section>
+
+<footer>
+    © 2026 Muhammed Ali tarafından geliştirilmiştir.
+</footer>
+
+</body>
+</html>
